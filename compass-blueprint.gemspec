@@ -14,5 +14,5 @@ Gem::Specification.new do |gem|
   gem.name          = "compass-blueprint"
   gem.require_paths = ["lib"]
   gem.version       = Compass::Blueprint::VERSION
-  gem.add_dependency 'compass', '~> 0.13'
+  gem.add_dependency 'compass'
 end
