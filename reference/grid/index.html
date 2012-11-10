@@ -1,0 +1,733 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Grid - Compass-Blueprint</title>
+  <meta name="author" content="Christopher M. Eppstein.">
+
+  
+  <meta name="description" content="Grid View Source The blueprint grid. This file can be imported using: @import "blueprint/grid" Examples Two Column Layout
+A semantic two-column &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://Compass.github.com/reference/grid/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Compass-Blueprint" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <nav role="navigation"><form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:Compass.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search the docs"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/" rel="home">Compass-blueprint</a></li>
+  <li><a href="/reference" rel="reference">Reference</a></li>
+  <li><a href="/help" rel="help">Help</a></li>
+<!--   <li><a href="/blog" rel="blog">Blog</a></li>
+   -->  <li><a href="/install" rel="install">Install</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Grid</h1>
+  </header>
+  
+  <p><a class="lsf-icon" title="github" href="https://github.com/Compass/compass-blueprint/blob/master/framework/blueprint/stylesheets/blueprint/_form.scss">View Source</a></p>
+
+<p>The blueprint grid.</p>
+
+<p>This file can be imported using: <code>@import "blueprint/grid"</code></p>
+
+<h2>Examples</h2>
+
+<p><a href="/examples/blueprint/grid/two_cols/">Two Column Layout</a>
+A semantic two-column layout</p>
+
+<hr />
+
+<h2>Compass Imports</h2>
+
+<ol>
+<li><a href="http://compass-style.org/reference/compass/utilities/general/clearfix/">Clearfix</a> – Mixins for clearfixing.</li>
+<li><a href="http://compass-style.org/reference/compass/utilities/general/float/">Float</a> – Mixins for cross-browser floats.</li>
+</ol>
+
+
+<hr />
+
+<h2>Configurable Variables <a class="lsf-icon" title="help" href="/help/tutorials/configurable-variables/"></a></h2>
+
+<p><span id="cont-blueprint-grid-columns"></span>
+<a href="#cont-blueprint-grid-columns">$blueprint-grid-columns</a> <code>24</code></p>
+
+<p>The number of columns in the grid.</p>
+
+<p><span id="cont-blueprint-grid-width"></span>
+<a href="#cont-blueprint-grid-width">$blueprint-grid-width</a> <code>30px</code></p>
+
+<p>The width of a column</p>
+
+<p><span id="cont-blueprint-grid-margin"></span>
+<a href="#cont-blueprint-grid-margin">$blueprint-grid-margin</a> <code>10px</code></p>
+
+<p>The amount of margin between columns</p>
+
+<hr />
+
+<h2>Constants</h2>
+
+<p><a href="">$blueprint-grid-outer-width</a> <code>$blueprint-grid-width + $blueprint-grid-margin</code></p>
+
+<p>The width of a column including the margin. With default settings this is <code>40px</code>.</p>
+
+<p><a href="">$blueprint-container-size</a> <code>$blueprint-grid-outer-width * $blueprint-grid-columns - $blueprint-grid-margin</code></p>
+
+<p>The width of the container. With default settings this is <code>950px</code>.</p>
+
+<hr />
+
+<h2>Functions</h2>
+
+<p><a href="#function-span-source" rel="view source">view source</a>
+<span id="function-span"></span></p>
+
+<h3><a href="#function-span">span</a>($n)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@function</span> <span class="nt">span</span><span class="o">(</span><span class="err">$</span><span class="nt">n</span><span class="o">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">@return</span> <span class="err">$</span><span class="nt">blueprint-grid-width</span> <span class="o">*</span> <span class="err">$</span><span class="nt">n</span> <span class="o">+</span> <span class="err">$</span><span class="nt">blueprint-grid-margin</span> <span class="o">*</span> <span class="o">(</span><span class="err">$</span><span class="nt">n</span> <span class="nt">-</span> <span class="nt">1</span><span class="o">);</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Return the width in pixels of <code>$n</code> columns.</p>
+
+<hr />
+
+<h2>Mixins</h2>
+
+<p><a href="#mixin-blueprint-grid-source" rel="view source">view source</a>
+<span id="mixin-blueprint-grid"></span></p>
+
+<h3><a href="#mixin-blueprint-grid">blueprint-grid</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> blueprint-grid</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// A container should group all your columns</span>
+</span><span class='line'>  <span class="nc">.container</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> container</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.column</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> column-base</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="c1">// The last column in a row needs this class (or mixin) or it will end up on the next row.</span>
+</span><span class='line'>  <span class="nc">.last</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> last</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="c1">// Use these classes (or mixins) to set the width of a column.</span>
+</span><span class='line'>  <span class="k">@for</span> <span class="nv">$n</span> <span class="ow">from</span> <span class="mi">1</span> <span class="ow">to</span> <span class="nv">$blueprint-grid-columns</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nc">.span-</span><span class="si">#{</span><span class="nv">$n</span><span class="si">}</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">@extend</span> <span class="nc">.column</span><span class="o">;</span>
+</span><span class='line'>      <span class="nt">width</span><span class="nd">:</span> <span class="nt">span</span><span class="o">(</span><span class="err">$</span><span class="nt">n</span><span class="o">);</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.span-</span><span class="si">#{</span><span class="nv">$blueprint-grid-columns</span><span class="si">}</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@extend</span> <span class="nc">.column</span><span class="o">;</span>
+</span><span class='line'>    <span class="nt">width</span><span class="nd">:</span> <span class="nt">span</span><span class="o">(</span><span class="err">$</span><span class="nt">blueprint-grid-columns</span><span class="o">);</span>
+</span><span class='line'>    <span class="nt">margin</span><span class="nd">:</span> <span class="nt">0</span><span class="o">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nt">input</span><span class="o">,</span> <span class="nt">textarea</span><span class="o">,</span> <span class="nt">select</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@for</span> <span class="nv">$n</span> <span class="ow">from</span> <span class="mi">1</span> <span class="ow">through</span> <span class="nv">$blueprint-grid-columns</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">&amp;</span><span class="nc">.span-</span><span class="si">#{</span><span class="nv">$n</span><span class="si">}</span> <span class="p">{</span>
+</span><span class='line'>        <span class="na">width</span><span class="o">:</span> <span class="nf">span</span><span class="p">(</span><span class="nv">$n</span><span class="p">);</span> <span class="p">}</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="c1">// Add these to a column to append empty cols.</span>
+</span><span class='line'>  <span class="k">@for</span> <span class="nv">$n</span> <span class="ow">from</span> <span class="mi">1</span> <span class="ow">to</span> <span class="nv">$blueprint-grid-columns</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nc">.append-</span><span class="si">#{</span><span class="nv">$n</span><span class="si">}</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">@include</span><span class="nd"> append</span><span class="p">(</span><span class="nv">$n</span><span class="p">);</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="c1">// Add these to a column to prepend empty cols.</span>
+</span><span class='line'>  <span class="k">@for</span> <span class="nv">$n</span> <span class="ow">from</span> <span class="mi">1</span> <span class="ow">to</span> <span class="nv">$blueprint-grid-columns</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nc">.prepend-</span><span class="si">#{</span><span class="nv">$n</span><span class="si">}</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">@include</span><span class="nd"> prepend</span><span class="p">(</span><span class="nv">$n</span><span class="p">);</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="c1">// Use these classes on an element to push it into the</span>
+</span><span class='line'>  <span class="c1">// next column, or to pull it into the previous column.</span>
+</span><span class='line'>  <span class="nn">#</span><span class="p">{</span><span class="nt">enumerate</span><span class="o">(</span><span class="s2">&quot;.pull&quot;</span><span class="o">,</span> <span class="nt">1</span><span class="o">,</span> <span class="err">$</span><span class="nt">blueprint-grid-columns</span><span class="o">)</span><span class="p">}</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> pull-base</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">@for</span> <span class="nv">$n</span> <span class="ow">from</span> <span class="mi">1</span> <span class="ow">through</span> <span class="nv">$blueprint-grid-columns</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nc">.pull-</span><span class="si">#{</span><span class="nv">$n</span><span class="si">}</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">@include</span><span class="nd"> pull-margins</span><span class="p">(</span><span class="nv">$n</span><span class="p">);</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nn">#</span><span class="p">{</span><span class="nt">enumerate</span><span class="o">(</span><span class="s2">&quot;.push&quot;</span><span class="o">,</span> <span class="nt">1</span><span class="o">,</span> <span class="err">$</span><span class="nt">blueprint-grid-columns</span><span class="o">)</span><span class="p">}</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> push-base</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">@for</span> <span class="nv">$n</span> <span class="ow">from</span> <span class="mi">1</span> <span class="ow">through</span> <span class="nv">$blueprint-grid-columns</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nc">.push-</span><span class="si">#{</span><span class="nv">$n</span><span class="si">}</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">@include</span><span class="nd"> push-margins</span><span class="p">(</span><span class="nv">$n</span><span class="p">);</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.prepend-top</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> prepend-top</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.append-bottom</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> append-bottom</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Generates presentational class names that you can use in your html to layout your pages.</p>
+
+<h4>Note:</h4>
+
+<p>Best practices discourage using this mixin, but it is provided to support legacy websites and to test the sass port against blueprint&#8217;s example pages.</p>
+
+<hr />
+
+<p><a href="#mixin-container-source" rel="view source">view source</a>
+<span id="mixin-container"></span></p>
+
+<h3><a href="#mixin-container">container</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> container</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  width</span><span class="o">:</span> <span class="nv">$blueprint-container-size</span><span class="p">;</span>
+</span><span class='line'><span class="na">  margin</span><span class="o">:</span> <span class="mi">0</span> <span class="no">auto</span><span class="p">;</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">include</span> <span class="nt">clearfix</span><span class="o">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>A container for your columns.</p>
+
+<h4>Note:</h4>
+
+<p>If you use this mixin without the class and want to support ie6 you must set text-align left on your container element in an IE stylesheet.</p>
+
+<hr />
+
+<p><a href="#mixin-last-source" rel="view source">view source</a>
+<span id="mixin-last"></span></p>
+
+<h3><a href="#mixin-last">last</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> last</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  margin-right</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The last column in a row needs this mixin or it will end up on the next row in some browsers.</p>
+
+<hr />
+
+<p><a href="#mixin-column-source" rel="view source">view source</a>
+<span id="mixin-column"></span></p>
+
+<h3><a href="#mixin-column">column</a>($n, $last)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> column</span><span class="p">(</span><span class="nv">$n</span><span class="o">,</span> <span class="nv">$last</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">include</span> <span class="nt">column-base</span><span class="o">(</span><span class="err">$</span><span class="nt">last</span><span class="o">);</span>
+</span><span class='line'><span class="err">  </span><span class="nt">width</span><span class="nd">:</span> <span class="nt">span</span><span class="o">(</span><span class="err">$</span><span class="nt">n</span><span class="o">);</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Use this mixins to set the width of n columns.</p>
+
+<hr />
+
+<p><a href="#mixin-span-source" rel="view source">view source</a>
+<span id="mixin-span"></span></p>
+
+<h3><a href="#mixin-span">span</a>($n, $important)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> span</span><span class="p">(</span><span class="nv">$n</span><span class="o">,</span> <span class="nv">$important</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  @warn</span><span class="err"> &quot;</span><span class="na">The</span><span class="err"> </span><span class="na">span</span><span class="err"> </span><span class="na">mixin</span><span class="err"> </span><span class="na">is</span><span class="err"> </span><span class="na">deprecated.</span><span class="err"> </span><span class="na">Please</span><span class="err"> </span><span class="na">use</span><span class="err"> </span><span class="na">the</span><span class="err"> </span><span class="na">span</span><span class="err"> </span><span class="na">function</span><span class="err"> </span><span class="na">instead.</span><span class="err"> </span><span class="na">E.g.</span><span class="err"> </span><span class="na">width</span><span class="o">:</span> <span class="nf">span</span><span class="p">(</span><span class="si">#{</span><span class="nv">$n</span><span class="si">}</span><span class="p">)</span><span class="s2">&quot;;</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">if</span> <span class="err">$</span><span class="nt">important</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    width</span><span class="o">:</span> <span class="nf">span</span><span class="p">(</span><span class="nv">$n</span><span class="p">)</span> <span class="nv">!important</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">else</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    width</span><span class="o">:</span> <span class="nf">span</span><span class="p">(</span><span class="nv">$n</span><span class="p">);</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Set only the width of an element to align it with the grid. Most of the time you&#8217;ll want to use <code>+column</code> instead.</p>
+
+<p>This mixin is especially useful for aligning tables to the grid.</p>
+
+<p>@deprecated Please use the span function with the width property instead.</p>
+
+<hr />
+
+<p><a href="#mixin-column-base-source" rel="view source">view source</a>
+<span id="mixin-column-base"></span></p>
+
+<h3><a href="#mixin-column-base">column-base</a>($last)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> column-base</span><span class="p">(</span><span class="nv">$last</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">include</span> <span class="nt">float-left</span><span class="o">;</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">if</span> <span class="err">$</span><span class="nt">last</span> <span class="p">{</span>
+</span><span class='line'><span class="err">    </span><span class="o">@</span><span class="nt">include</span> <span class="nt">last</span><span class="o">;</span> <span class="p">}</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">else</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    margin-right</span><span class="o">:</span> <span class="nv">$blueprint-grid-margin</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="err">  </span><span class="o">*</span> <span class="nt">html</span> <span class="k">&amp;</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    overflow-x</span><span class="o">:</span> <span class="no">hidden</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The basic set of styles needed to make an element behave like a column:</p>
+
+<ul>
+<li>floated to left</li>
+<li>gutter margin on the right (unless the last column)</li>
+<li>Some IE fixes</li>
+</ul>
+
+
+<h4>Note:</h4>
+
+<p>This mixin gets applied automatically when using <code>+column</code> so you probably don&#8217;t need to use it directly unless you need to deviate from the grid or are trying to reduce the amount of generated CSS.</p>
+
+<hr />
+
+<p><a href="#mixin-append-source" rel="view source">view source</a>
+<span id="mixin-append"></span></p>
+
+<h3><a href="#mixin-append">append</a>($n)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> append</span><span class="p">(</span><span class="nv">$n</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="na">padding-right</span><span class="o">:</span> <span class="nv">$blueprint-grid-outer-width</span> <span class="o">*</span> <span class="nv">$n</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Mixin to a column to append n empty columns to the right by adding right padding to the column.</p>
+
+<hr />
+
+<p><a href="#mixin-prepend-source" rel="view source">view source</a>
+<span id="mixin-prepend"></span></p>
+
+<h3><a href="#mixin-prepend">prepend</a>($n)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> prepend</span><span class="p">(</span><span class="nv">$n</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="na">padding-left</span><span class="o">:</span> <span class="nv">$blueprint-grid-outer-width</span> <span class="o">*</span> <span class="nv">$n</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Mixin to a column to append n empty columns to the left by adding left padding to the column.</p>
+
+<hr />
+
+<p><a href="#mixin-append-bottom-source" rel="view source">view source</a>
+<span id="mixin-append-bottom"></span></p>
+
+<h3><a href="#mixin-append-bottom">append-bottom</a>($ammount)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> append-bottom</span><span class="p">(</span><span class="nv">$amount</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">em</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="na">margin-bottom</span><span class="o">:</span> <span class="nv">$amount</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Adds trailing margin.</p>
+
+<hr />
+
+<p><a href="#mixin-prepend-top-source" rel="view source">view source</a>
+<span id="mixin-prepend-top"></span></p>
+
+<h3><a href="#mixin-prepend-top">prepend-top</a>($ammount)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> prepend-top</span><span class="p">(</span><span class="nv">$amount</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">em</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="na">margin-top</span><span class="o">:</span> <span class="nv">$amount</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Adds leading margin.</p>
+
+<hr />
+
+<p><a href="#mixin-pull-base-source" rel="view source">view source</a>
+<span id="mixin-pull-base"></span></p>
+
+<h3><a href="#mixin-pull-base">pull-base</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> pull-base</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">@include</span><span class="nd"> float-left</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">position</span><span class="o">:</span> <span class="no">relative</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Base styles that make it possible to pull an element to the left.</p>
+
+<h4>Note:</h4>
+
+<p>This mixin gets applied automatically when using <code>+pull</code> so you probably don&#8217;t need to use it directly unless you need to deviate from the grid or are trying to reduce the amount of generated CSS.</p>
+
+<hr />
+
+<p><a href="#mixin-pull-margins-source" rel="view source">view source</a>
+<span id="mixin-pull-margins"></span></p>
+
+<h3><a href="#mixin-pull-margins">pull-margins</a>($n, $last)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> pull-margins</span><span class="p">(</span><span class="nv">$n</span><span class="o">,</span> <span class="nv">$last</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">@if</span> <span class="nv">$last</span> <span class="p">{</span>
+</span><span class='line'>    <span class="na">margin-left</span><span class="o">:</span> <span class="o">-</span><span class="nv">$blueprint-grid-outer-width</span> <span class="o">*</span> <span class="nv">$n</span> <span class="o">+</span> <span class="nv">$blueprint-grid-margin</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">@else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="na">margin-left</span><span class="o">:</span> <span class="o">-</span><span class="nv">$blueprint-grid-outer-width</span> <span class="o">*</span> <span class="nv">$n</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The amount of pulling for element to the left.</p>
+
+<h4>Note:</h4>
+
+<p>This mixin gets applied automatically when using <code>+pull</code> so you probably don&#8217;t need to use it directly unless you need to deviate from the grid or are trying to reduce the amount of generated CSS.</p>
+
+<hr />
+
+<p><a href="#mixin-pull-source" rel="view source">view source</a>
+<span id="mixin-pull"></span></p>
+
+<h3><a href="#mixin-pull">pull</a>($n, $last)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> pull</span><span class="p">(</span><span class="nv">$n</span><span class="o">,</span> <span class="nv">$last</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">@include</span><span class="nd"> pull-base</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">@include</span><span class="nd"> pull-margins</span><span class="p">(</span><span class="nv">$n</span><span class="o">,</span> <span class="nv">$last</span><span class="p">);</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Moves a column <code>n</code> columns to the left.</p>
+
+<p>This mixin can also be used to change the display order of columns.</p>
+
+<p>If pulling past the last (visually) element in a row, pass <code>true</code> as the second argument so the calculations can adjust accordingly. For example:</p>
+
+<p>HTML:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;one&quot;</span><span class="nt">&gt;</span>One<span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;two&quot;</span><span class="nt">&gt;</span>Two<span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sass:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nn">#one</span>
+</span><span class='line'>  <span class="nd">+column</span><span class="p">(</span><span class="mi">18</span><span class="o">,</span> <span class="n-Pseudo">true</span><span class="p">)</span>
+</span><span class='line'>  <span class="nd">+prepend</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</span><span class='line'><span class="nn">#two</span>
+</span><span class='line'>  <span class="nd">+column</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</span><span class='line'>  <span class="nd">+pull</span><span class="p">(</span><span class="mi">18</span><span class="o">,</span> <span class="n-Pseudo">true</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://compass-style.org/examples/blueprint/grid/pull/">Pull Example</a> – Uses pull to change the display order of columns.</p>
+
+<hr />
+
+<p><a href="#mixin-push-base-source" rel="view source">view source</a>
+<span id="mixin-push-base"></span></p>
+
+<h3><a href="#mixin-push-base">push-base</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> push-base</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">@include</span><span class="nd"> float-left</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">position</span><span class="o">:</span> <span class="no">relative</span><span class="p">;</span> <span class="p">}</span><span class="nt">s</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-push-margins-source" rel="view source">view source</a>
+<span id="mixin-push-margins"></span></p>
+
+<h3><a href="#mixin-push-margins">push-margins</a>($n)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> push-margins</span><span class="p">(</span><span class="nv">$n</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span> <span class="o">-</span><span class="nv">$blueprint-grid-outer-width</span> <span class="o">*</span> <span class="nv">$n</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">em</span> <span class="nv">$blueprint-grid-outer-width</span> <span class="o">*</span> <span class="nv">$n</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-push-source" rel="view source">view source</a>
+<span id="mixin-push"></span></p>
+
+<h3><a href="#mixin-push">push</a>($n)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> push</span><span class="p">(</span><span class="nv">$n</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">@include</span><span class="nd"> push-base</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">@include</span><span class="nd"> push-margins</span><span class="p">(</span><span class="nv">$n</span><span class="p">);</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Mixin to a column to push it <code>n</code> columns to the right</p>
+
+<hr />
+
+<p><a href="#mixin-border-source" rel="view source">view source</a>
+<span id="mixin-border"></span></p>
+
+<h3><a href="#mixin-border">border</a>($border-color, $border-width)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> border</span><span class="p">(</span><span class="nv">$border-color</span><span class="o">:</span> <span class="nv">$blueprint-border-color</span><span class="o">,</span> <span class="nv">$border-width</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  padding-right</span><span class="o">:</span> <span class="nv">$blueprint-grid-margin</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">;</span>
+</span><span class='line'><span class="na">  margin-right</span><span class="o">:</span> <span class="nv">$blueprint-grid-margin</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+</span><span class='line'><span class="na">  border-right</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$border-width</span><span class="si">}</span> <span class="no">solid</span> <span class="si">#{</span><span class="nv">$border-color</span><span class="si">}</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Border on right hand side of a column.</p>
+
+<hr />
+
+<p><a href="#mixin-colborder-source" rel="view source">view source</a>
+<span id="mixin-colborder"></span></p>
+
+<h3><a href="#mixin-colborder">colborder</a>($border-color, $border-width)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> colborder</span><span class="p">(</span><span class="nv">$border-color</span><span class="o">:</span> <span class="nv">$blueprint-border-color</span><span class="o">,</span> <span class="nv">$border-width</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  padding-right</span><span class="o">:</span> <span class="nf">floor</span><span class="p">((</span><span class="nv">$blueprint-grid-width</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="nv">$blueprint-grid-margin</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
+</span><span class='line'><span class="na">  margin-right</span><span class="o">:</span> <span class="nf">ceil</span><span class="p">((</span><span class="nv">$blueprint-grid-width</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="nv">$blueprint-grid-margin</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
+</span><span class='line'><span class="na">  border-right</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$border-width</span><span class="si">}</span> <span class="no">solid</span> <span class="si">#{</span><span class="nv">$border-color</span><span class="si">}</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Border with more whitespace, spans one column.</p>
+
+<hr />
+
+<p><a href="#mixin-colruler-source" rel="view source">view source</a>
+<span id="mixin-colruler"></span></p>
+
+<h3><a href="#mixin-colruler">colruler</a>($border-color)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> colruler</span><span class="p">(</span><span class="nv">$border-color</span><span class="o">:</span> <span class="mh">#dddddd</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  background</span><span class="o">:</span> <span class="nv">$border-color</span><span class="p">;</span>
+</span><span class='line'><span class="na">  color</span><span class="o">:</span> <span class="nv">$border-color</span><span class="p">;</span>
+</span><span class='line'><span class="na">  clear</span><span class="o">:</span> <span class="no">both</span><span class="p">;</span>
+</span><span class='line'><span class="na">  float</span><span class="o">:</span> <span class="no">none</span><span class="p">;</span>
+</span><span class='line'><span class="na">  width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span><span class='line'><span class="na">  height</span><span class="o">:</span> <span class="mi">0</span><span class="mf">.1</span><span class="kt">em</span><span class="p">;</span>
+</span><span class='line'><span class="na">  margin</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span><span class="mf">.45</span><span class="kt">em</span><span class="p">;</span>
+</span><span class='line'><span class="na">  border</span><span class="o">:</span> <span class="no">none</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Mixin this to an hr to make a horizontal ruler across a column.</p>
+
+<hr />
+
+<p><a href="#mixin-colspacer-source" rel="view source">view source</a>
+<span id="mixin-colspacer"></span></p>
+
+<h3><a href="#mixin-colspacer">colspacer</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> colspacer</span> <span class="p">{</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">include</span> <span class="nt">colruler</span><span class="o">;</span>
+</span><span class='line'><span class="err">  </span><span class="nt">background</span><span class="nd">:</span> <span class="nt">white</span><span class="o">;</span>
+</span><span class='line'><span class="err">  </span><span class="nt">color</span><span class="nd">:</span> <span class="nt">white</span><span class="o">;</span>
+</span><span class='line'><span class="err">  </span><span class="nt">visibility</span><span class="nd">:</span> <span class="nt">hidden</span><span class="o">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Mixin this to an hr to make a horizontal spacer across a column.</p>
+
+<hr />
+
+  
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<ul>
+	<li><a href="/reference/buttons/">Buttons</a></li>
+	<li><a href="/reference/colors/">Colors</a></li>
+	<li><a href="/reference/debug/">Debug</a></li>
+	<li><a href="/reference/fancy-type/">Fancy Type</a></li>
+	<li><a href="/reference/form/">Form</a></li>
+	<li><a href="/reference/grid/">Grid</a></li>
+	<li><a href="/reference/interaction/">Interaction</a></li>
+	<li><a href="/reference/internet-explorer/">Internet Explorer</a></li>
+	<li><a href="/reference/link-icons/">Link Icons</a></li>
+	<li><a href="/reference/liquid/">Liquid</a></li>
+	<li><a href="/reference/print/">Print</a></li>
+	<li><a href="/reference/reset/">Reset</a></li>
+	<li><a href="/reference/rtl/">RTL</a></li>
+	<li><a href="/reference/scaffolding/">Scaffolding</a></li>
+	<li><a href="/reference/typography/">Typography</a></li>
+	<li><a href="/reference/utilities/">Utilities</a></li>
+</ul>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Christopher M. Eppstein. -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

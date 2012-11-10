@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Interaction - Compass-Blueprint</title>
+  <meta name="author" content="Christopher M. Eppstein.">
+
+  
+  <meta name="description" content="Interaction View Source Some classes that are used in common website interactions. This file can be imported using: @import "blueprint/interaction" &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://Compass.github.com/reference/interaction/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Compass-Blueprint" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <nav role="navigation"><form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:Compass.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search the docs"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/" rel="home">Compass-blueprint</a></li>
+  <li><a href="/reference" rel="reference">Reference</a></li>
+  <li><a href="/help" rel="help">Help</a></li>
+<!--   <li><a href="/blog" rel="blog">Blog</a></li>
+   -->  <li><a href="/install" rel="install">Install</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Interaction</h1>
+  </header>
+  
+  <p><a class="lsf-icon" title="github" href="https://github.com/Compass/compass-blueprint/blob/master/framework/blueprint/stylesheets/blueprint/_interaction.scss">View Source</a></p>
+
+<p>Some classes that are used in common website interactions.</p>
+
+<p>This file can be imported using: <code>@import "blueprint/interaction"</code></p>
+
+<h2>Compass Imports</h2>
+
+<ol>
+<li><a href="http://compass-style.org/reference/blueprint/colors/">Colors</a></li>
+</ol>
+
+
+<hr />
+
+<h2>Mixins</h2>
+
+<p><a href="#mixin-blueprint-interaction-source" rel="view source">view source</a>
+<span id="mixin-blueprint-interaction"></span></p>
+
+<h3><a href="#mixin-blueprint-interaction">blueprint-interaction</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> blueprint-interaction</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nc">.feedback</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> feedback-base</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.error</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> error</span><span class="p">(</span><span class="n">feedback</span><span class="p">);</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.alert</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@extend</span> <span class="nc">.error</span><span class="o">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.notice</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> notice</span><span class="p">(</span><span class="n">feedback</span><span class="p">);</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.success</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> success</span><span class="p">(</span><span class="n">feedback</span><span class="p">);</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.info</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> info</span><span class="p">(</span><span class="n">feedback</span><span class="p">);</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.hide</span> <span class="p">{</span>
+</span><span class='line'>    <span class="na">display</span><span class="o">:</span> <span class="no">none</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.highlight</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> highlight</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.added</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> added</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.removed</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> removed</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-feedback-base-source" rel="view source">view source</a>
+<span id="mixin-feedback-base"></span></p>
+
+<h3><a href="#mixin-feedback-base">feedback-base</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> feedback-base</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  padding</span><span class="o">:</span> <span class="mi">0</span><span class="mf">.8</span><span class="kt">em</span><span class="p">;</span>
+</span><span class='line'><span class="na">  margin-bottom</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+</span><span class='line'><span class="na">  border</span><span class="o">:</span> <span class="mi">2</span><span class="kt">px</span> <span class="no">solid</span> <span class="nv">$feedback-border-color</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-error-source" rel="view source">view source</a>
+<span id="mixin-error"></span></p>
+
+<h3><a href="#mixin-error">error</a>($feedback-base-class)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> error</span><span class="p">(</span><span class="nv">$feedback-base-class</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">if</span> <span class="err">$</span><span class="nt">feedback-base-class</span> <span class="p">{</span>
+</span><span class='line'><span class="err">    </span><span class="o">@</span><span class="nt">extend</span> <span class="nc">.</span><span class="si">#{</span><span class="nv">$feedback-base-class</span><span class="si">}</span><span class="o">;</span> <span class="p">}</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">else</span> <span class="p">{</span>
+</span><span class='line'><span class="err">    </span><span class="o">@</span><span class="nt">include</span> <span class="nt">feedback-base</span><span class="o">;</span> <span class="p">}</span>
+</span><span class='line'><span class="na">  background</span><span class="o">:</span> <span class="nv">$error-bg-color</span><span class="p">;</span>
+</span><span class='line'><span class="na">  color</span><span class="o">:</span> <span class="nv">$error-color</span><span class="p">;</span>
+</span><span class='line'><span class="na">  border-color</span><span class="o">:</span> <span class="nv">$error-border-color</span><span class="p">;</span>
+</span><span class='line'><span class="err">  </span><span class="nt">a</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    color</span><span class="o">:</span> <span class="nv">$error-color</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-notice-source" rel="view source">view source</a>
+<span id="mixin-notice"></span></p>
+
+<h3><a href="#mixin-notice">notice</a>($feedback-base-class)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> notice</span><span class="p">(</span><span class="nv">$feedback-base-class</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">if</span> <span class="err">$</span><span class="nt">feedback-base-class</span> <span class="p">{</span>
+</span><span class='line'><span class="err">    </span><span class="o">@</span><span class="nt">extend</span> <span class="nc">.</span><span class="si">#{</span><span class="nv">$feedback-base-class</span><span class="si">}</span><span class="o">;</span> <span class="p">}</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">else</span> <span class="p">{</span>
+</span><span class='line'><span class="err">    </span><span class="o">@</span><span class="nt">include</span> <span class="nt">feedback-base</span><span class="o">;</span> <span class="p">}</span>
+</span><span class='line'><span class="na">  background</span><span class="o">:</span> <span class="nv">$notice-bg-color</span><span class="p">;</span>
+</span><span class='line'><span class="na">  color</span><span class="o">:</span> <span class="nv">$notice-color</span><span class="p">;</span>
+</span><span class='line'><span class="na">  border-color</span><span class="o">:</span> <span class="nv">$notice-border-color</span><span class="p">;</span>
+</span><span class='line'><span class="err">  </span><span class="nt">a</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    color</span><span class="o">:</span> <span class="nv">$notice-color</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-success-source" rel="view source">view source</a>
+<span id="mixin-success"></span></p>
+
+<h3><a href="#mixin-success">success</a>($feedback-base-class)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> success</span><span class="p">(</span><span class="nv">$feedback-base-class</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">if</span> <span class="err">$</span><span class="nt">feedback-base-class</span> <span class="p">{</span>
+</span><span class='line'><span class="err">    </span><span class="o">@</span><span class="nt">extend</span> <span class="nc">.</span><span class="si">#{</span><span class="nv">$feedback-base-class</span><span class="si">}</span><span class="o">;</span> <span class="p">}</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">else</span> <span class="p">{</span>
+</span><span class='line'><span class="err">    </span><span class="o">@</span><span class="nt">include</span> <span class="nt">feedback-base</span><span class="o">;</span> <span class="p">}</span>
+</span><span class='line'><span class="na">  background</span><span class="o">:</span> <span class="nv">$success-bg-color</span><span class="p">;</span>
+</span><span class='line'><span class="na">  color</span><span class="o">:</span> <span class="nv">$success-color</span><span class="p">;</span>
+</span><span class='line'><span class="na">  border-color</span><span class="o">:</span> <span class="nv">$success-border-color</span><span class="p">;</span>
+</span><span class='line'><span class="err">  </span><span class="nt">a</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    color</span><span class="o">:</span> <span class="nv">$success-color</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-info-source" rel="view source">view source</a>
+<span id="mixin-info"></span></p>
+
+<h3><a href="#mixin-info">info</a>($feedback-base-class)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> info</span><span class="p">(</span><span class="nv">$feedback-base-class</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">if</span> <span class="err">$</span><span class="nt">feedback-base-class</span> <span class="p">{</span>
+</span><span class='line'><span class="err">    </span><span class="o">@</span><span class="nt">extend</span> <span class="nc">.</span><span class="si">#{</span><span class="nv">$feedback-base-class</span><span class="si">}</span><span class="o">;</span> <span class="p">}</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">else</span> <span class="p">{</span>
+</span><span class='line'><span class="err">    </span><span class="o">@</span><span class="nt">include</span> <span class="nt">feedback-base</span><span class="o">;</span> <span class="p">}</span>
+</span><span class='line'><span class="na">  background</span><span class="o">:</span> <span class="nv">$info-bg-color</span><span class="p">;</span>
+</span><span class='line'><span class="na">  color</span><span class="o">:</span> <span class="nv">$info-color</span><span class="p">;</span>
+</span><span class='line'><span class="na">  border-color</span><span class="o">:</span> <span class="nv">$info-border-color</span><span class="p">;</span>
+</span><span class='line'><span class="err">  </span><span class="nt">a</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    color</span><span class="o">:</span> <span class="nv">$info-color</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-highlight-source" rel="view source">view source</a>
+<span id="mixin-highlight"></span></p>
+
+<h3><a href="#mixin-highlight">highlight</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> highlight</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  background</span><span class="o">:</span> <span class="nv">$highlight-color</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-added-source" rel="view source">view source</a>
+<span id="mixin-added"></span></p>
+
+<h3><a href="#mixin-added">added</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> added</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  background</span><span class="o">:</span> <span class="nv">$added-bg-color</span><span class="p">;</span>
+</span><span class='line'><span class="na">  color</span><span class="o">:</span> <span class="nv">$added-color</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-removed-source" rel="view source">view source</a>
+<span id="mixin-removed"></span></p>
+
+<h3><a href="#mixin-removed">removed</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> removed</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  background</span><span class="o">:</span> <span class="nv">$removed-bg-color</span><span class="p">;</span>
+</span><span class='line'><span class="na">  color</span><span class="o">:</span> <span class="nv">$removed-color</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+  
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<ul>
+	<li><a href="/reference/buttons/">Buttons</a></li>
+	<li><a href="/reference/colors/">Colors</a></li>
+	<li><a href="/reference/debug/">Debug</a></li>
+	<li><a href="/reference/fancy-type/">Fancy Type</a></li>
+	<li><a href="/reference/form/">Form</a></li>
+	<li><a href="/reference/grid/">Grid</a></li>
+	<li><a href="/reference/interaction/">Interaction</a></li>
+	<li><a href="/reference/internet-explorer/">Internet Explorer</a></li>
+	<li><a href="/reference/link-icons/">Link Icons</a></li>
+	<li><a href="/reference/liquid/">Liquid</a></li>
+	<li><a href="/reference/print/">Print</a></li>
+	<li><a href="/reference/reset/">Reset</a></li>
+	<li><a href="/reference/rtl/">RTL</a></li>
+	<li><a href="/reference/scaffolding/">Scaffolding</a></li>
+	<li><a href="/reference/typography/">Typography</a></li>
+	<li><a href="/reference/utilities/">Utilities</a></li>
+</ul>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Christopher M. Eppstein. -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

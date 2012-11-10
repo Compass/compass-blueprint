@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Install - Compass-Blueprint</title>
+  <meta name="author" content="Christopher M. Eppstein.">
+
+  
+  <meta name="description" content="Install Installing Ruby Compass-blueprint runs on any computer that has ruby &amp; compass installed. For more advanced users you may want to &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://Compass.github.com/install/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Compass-Blueprint" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   class="no-sidebar"  >
+  <nav role="navigation"><form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:Compass.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search the docs"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/" rel="home">Compass-blueprint</a></li>
+  <li><a href="/reference" rel="reference">Reference</a></li>
+  <li><a href="/help" rel="help">Help</a></li>
+<!--   <li><a href="/blog" rel="blog">Blog</a></li>
+   -->  <li><a href="/install" rel="install">Install</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Install</h1>
+  </header>
+  
+  <h2>Installing Ruby</h2>
+
+<p>Compass-blueprint runs on any computer that has <a href="http://www.ruby-lang.org/en/downloads/">ruby</a> <span class="amp">&amp;</span> <a href="http://compass-style.org/install/">compass installed</a>.</p>
+
+<p>For more advanced users you may want to install <a href="http://rvm.beginrescueend.com/rvm/install/">rvm</a>.</p>
+
+<h2>Installing Compass-blueprint</h2>
+
+<p>Compass-blueprint is a Compass extension that runs on the command line. On any system with ruby and Compass installed, open your terminal and type:</p>
+
+<ol>
+<li><code>gem update --system</code></li>
+<li><code>gem install compass-blueprint</code></li>
+<li><code>compass create &lt;myproject&gt; --using blueprint</code></li>
+</ol>
+
+
+<p class="note">Note: Values indicated by &lt;&gt; are placeholders. Change them to suit your needs.</p>
+
+
+<p>This will install Compass and Sass too. If you want to verify that compass is installed:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>compass version
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>Manual Setup</h2>
+
+<p>When starting a project from scratch:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>compass create /path/to/project --using blueprint
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When installing into an existing project:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd</span> /path/to/project
+</span><span class='line'>compass install blueprint
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To read more about using the Blueprint framework with Compass, <a href="/reference/">see the docs</a></p>
+
+<hr />
+
+<h2>Rails Setup</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>compass init rails /path/to/myrailsproject --using blueprint
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Next Steps</h2>
+
+<ul>
+<li><a href="/help/">Get Help</a></li>
+</ul>
+
+
+  
+</article>
+
+</div>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Christopher M. Eppstein. -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

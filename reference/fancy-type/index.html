@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Fancy Type - Compass-Blueprint</title>
+  <meta name="author" content="Christopher M. Eppstein.">
+
+  
+  <meta name="description" content="Fancy Type View Source Fancy Typography for your website. This file can be imported using: @import "blueprint/fancy-type" Compass Imports Typography &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://Compass.github.com/reference/fancy-type/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Compass-Blueprint" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <nav role="navigation"><form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:Compass.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search the docs"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/" rel="home">Compass-blueprint</a></li>
+  <li><a href="/reference" rel="reference">Reference</a></li>
+  <li><a href="/help" rel="help">Help</a></li>
+<!--   <li><a href="/blog" rel="blog">Blog</a></li>
+   -->  <li><a href="/install" rel="install">Install</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Fancy Type</h1>
+  </header>
+  
+  <p><a class="lsf-icon" title="github" href="https://github.com/Compass/compass-blueprint/blob/master/framework/blueprint/stylesheets/blueprint/_fancy-type.scss">View Source</a></p>
+
+<p>Fancy Typography for your website.</p>
+
+<p>This file can be imported using: <code>@import "blueprint/fancy-type"</code></p>
+
+<h2>Compass Imports</h2>
+
+<ol>
+<li><a href="http://compass-style.org/reference/blueprint/typography/">Typography</a></li>
+</ol>
+
+
+<h2>Configurable Variables <a class="lsf-icon" title="help" href="/help/tutorials/configurable-variables/"></a></h2>
+
+<p><span id="const-alternate-text-font"></span>
+<a href="#const-alternate-text-font">$alternate-text-font</a> <code>"Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif</code></p>
+
+<h2>Mixins</h2>
+
+<p><a href="#mixin-fancy-type-source" rel="view source">view source</a>
+<span id="mixin-fancy-type"></span></p>
+
+<h3><a href="#mixin-fancy-type">fancy-type</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> fancy-type</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">@include</span><span class="nd"> fancy-paragraphs</span><span class="p">;</span>
+</span><span class='line'>  <span class="nc">.caps</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> caps</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.dquo</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> dquo</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.alt</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> alt</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To install the fancy type plugin:</p>
+
+<ol>
+<li>Import the fancy-type module: <code>@import "blueprint/fancy-type"</code></li>
+<li>Mix in <code>fancy-type</code> to your project&#8217;s body or at the top level of your stylesheet:
+<code>body { @include fancy-type; }</code></li>
+</ol>
+
+
+<hr />
+
+<p><a href="#mixin-alt-source" rel="view source">view source</a>
+<span id="mixin-alt"></span></p>
+
+<h3><a href="#mixin-alt">alt</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> alt</span> <span class="p">{</span>
+</span><span class='line'>  <span class="na">color</span><span class="o">:</span> <span class="nv">$alt-text-color</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">font-family</span><span class="o">:</span> <span class="nv">$alternate-text-font</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">font-style</span><span class="o">:</span> <span class="no">italic</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">font-weight</span><span class="o">:</span> <span class="no">normal</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For great looking type, use this code instead of asdf: <code>&lt;span class="alt"&gt;asdf&lt;/span&gt;</code> Best used on prepositions and ampersands.</p>
+
+<hr />
+
+<p><a href="#mixin-dquo-source" rel="view source">view source</a>
+<span id="mixin-dquo"></span></p>
+
+<h3><a href="#mixin-dquo">dquo</a>($offset)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> dquo</span><span class="p">(</span><span class="nv">$offset</span><span class="o">:</span> <span class="mi">0</span><span class="mf">.5</span><span class="kt">em</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="na">margin-left</span><span class="o">:</span> <span class="o">-</span><span class="nv">$offset</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For great looking quote marks in titles, replace &#8220;asdf&#8221; with: <code>&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;asdf&amp;#8221;</code> (That is, when the title starts with a quote mark). <em>Note: you may have to change this value depending on your font size.</em></p>
+
+<hr />
+
+<p><a href="#mixin-incr-source" rel="view source">view source</a>
+<span id="mixin-incr"></span></p>
+
+<h3><a href="#mixin-incr">incr</a>($font-size, $base-font-size, $old-line-height)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> incr</span><span class="p">(</span><span class="nv">$font-size</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span><span class="o">,</span> <span class="nv">$base-font-size</span><span class="o">:</span> <span class="nv">$blueprint-font-size</span><span class="o">,</span> <span class="nv">$old-line-height</span><span class="o">:</span> <span class="nv">$base-font-size</span> <span class="o">*</span> <span class="mi">1</span><span class="mf">.5</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="na">font-size</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span> <span class="o">*</span> <span class="nv">$font-size</span> <span class="o">/</span> <span class="nv">$base-font-size</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">line-height</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span> <span class="o">*</span> <span class="nv">$old-line-height</span> <span class="o">/</span> <span class="nv">$font-size</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">5</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">margin-bottom</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">em</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Reduced size type with <a href="http://www.markboulton.co.uk/journal/incremental-leading">incremental leading</a></p>
+
+<p>This could be used for side notes. For smaller type, you don&#8217;t necessarily want to follow the 1.5x vertical rhythm &#8211; the line-height is too much.</p>
+
+<p>Using this mixin, reduces your font size and line-height so that for every four lines of normal sized type, there is five lines of the sidenote. eg:</p>
+
+<p>Arguments: * <code>$font-size</code> - The desired font size in pixels. This will be converted to ems for you. Defaults to 10px. * <code>$base-font-size</code> - The base font size in pixels. Defaults to 12px * <code>$old-line-height</code> - The old line height. Defaults to 1.5 times the base-font-size</p>
+
+<hr />
+
+<p><a href="#mixin-caps-source" rel="view source">view source</a>
+<span id="mixin-caps"></span></p>
+
+<h3><a href="#mixin-caps">caps</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> caps</span> <span class="p">{</span>
+</span><span class='line'>  <span class="na">font-variant</span><span class="o">:</span> <span class="no">small-caps</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">letter-spacing</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">text-transform</span><span class="o">:</span> <span class="no">lowercase</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">font-size</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.2</span><span class="kt">em</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">line-height</span><span class="o">:</span> <span class="mi">1</span><span class="kt">%</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">font-weight</span><span class="o">:</span> <span class="no">bold</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Surround uppercase words and abbreviations with this class. Based on work by <a href="http://twistedintellect.com/">Jørgen Arnor Gårdsø Lom</a></p>
+
+<hr />
+
+<p><a href="#mixin-fancy-paragraphs-source" rel="view source">view source</a>
+<span id="mixin-fancy-paragraphs"></span></p>
+
+<h3><a href="#mixin-fancy-paragraphs">fancy-paragraphs</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> fancy-paragraphs</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nt">p</span> <span class="o">+</span> <span class="nt">p</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> sibling-indentation</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nt">p</span><span class="nc">.incr</span><span class="o">,</span>
+</span><span class='line'>  <span class="nc">.incr</span> <span class="nt">p</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> incr</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This mixin is automatically included when you include <code>fancy-type</code></p>
+
+<hr />
+
+<p><a href="#mixin-sibling-indentation-source" rel="view source">view source</a>
+<span id="mixin-sibling-indentation"></span></p>
+
+<h3><a href="#mixin-sibling-indentation">sibling-indentation</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> sibling-indentation</span> <span class="p">{</span>
+</span><span class='line'>  <span class="na">text-indent</span><span class="o">:</span> <span class="mi">2</span><span class="kt">em</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">margin-top</span><span class="o">:</span> <span class="mi">-1</span><span class="mf">.5</span><span class="kt">em</span><span class="p">;</span>
+</span><span class='line'>  <span class="cm">/* Don&#39;t want this in forms. */</span>
+</span><span class='line'>  <span class="nt">form</span> <span class="k">&amp;</span> <span class="p">{</span>
+</span><span class='line'>    <span class="na">text-indent</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Indentation instead of line shifts for sibling paragraphs. Mixin to a selector like <code>p + p</code></p>
+
+  
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<ul>
+	<li><a href="/reference/buttons/">Buttons</a></li>
+	<li><a href="/reference/colors/">Colors</a></li>
+	<li><a href="/reference/debug/">Debug</a></li>
+	<li><a href="/reference/fancy-type/">Fancy Type</a></li>
+	<li><a href="/reference/form/">Form</a></li>
+	<li><a href="/reference/grid/">Grid</a></li>
+	<li><a href="/reference/interaction/">Interaction</a></li>
+	<li><a href="/reference/internet-explorer/">Internet Explorer</a></li>
+	<li><a href="/reference/link-icons/">Link Icons</a></li>
+	<li><a href="/reference/liquid/">Liquid</a></li>
+	<li><a href="/reference/print/">Print</a></li>
+	<li><a href="/reference/reset/">Reset</a></li>
+	<li><a href="/reference/rtl/">RTL</a></li>
+	<li><a href="/reference/scaffolding/">Scaffolding</a></li>
+	<li><a href="/reference/typography/">Typography</a></li>
+	<li><a href="/reference/utilities/">Utilities</a></li>
+</ul>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Christopher M. Eppstein. -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

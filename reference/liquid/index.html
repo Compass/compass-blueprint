@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Liquid - Compass-Blueprint</title>
+  <meta name="author" content="Christopher M. Eppstein.">
+
+  
+  <meta name="description" content="Liquid View Source Import this to have a liquid grid. The original liquid grid documentation is here. By default the container takes 80% of the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://Compass.github.com/reference/liquid/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Compass-Blueprint" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <nav role="navigation"><form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:Compass.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search the docs"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/" rel="home">Compass-blueprint</a></li>
+  <li><a href="/reference" rel="reference">Reference</a></li>
+  <li><a href="/help" rel="help">Help</a></li>
+<!--   <li><a href="/blog" rel="blog">Blog</a></li>
+   -->  <li><a href="/install" rel="install">Install</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Liquid</h1>
+  </header>
+  
+  <p><a class="lsf-icon" title="github" href="https://github.com/Compass/compass-blueprint/blob/master/framework/blueprint/stylesheets/blueprint/_liquid.scss">View Source</a></p>
+
+<p>Import this to have a liquid grid.</p>
+
+<p>The original liquid grid documentation is <a href="http://groups.google.com/group/blueprintcss/msg/d7171a8bef20b9a2">here</a>.</p>
+
+<p>By default the container takes 80% of the canvas, you can override this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="nc">.container</span> <span class="p">{</span>
+</span><span class='line'>  <span class="na">width</span><span class="o">:</span> <span class="mi">99</span><span class="kt">%</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This file can be imported using: <code>@import "blueprint/liquid"</code></p>
+
+<hr />
+
+<h2>Compass Imports</h2>
+
+<ol>
+<li><a href="http://compass-style.org/reference/compass/utilities/general/clearfix/">Clearfix</a> – Mixins for clearfixing.</li>
+<li><a href="http://compass-style.org/reference/compass/utilities/general/float/">Float</a> – Mixins for cross-browser floats.</li>
+</ol>
+
+
+<hr />
+
+<h2>Configurable Variables <a class="lsf-icon" title="help" href="/help/tutorials/configurable-variables/"></a></h2>
+
+<p><span id="cont-blueprint-liquid-grid-columns"></span>
+<a href="#cont-blueprint-liquid-grid-columns">$blueprint-liquid-grid-columns</a> <code>24</code></p>
+
+<p>Main layout grid, override these constants to build your grid and container sizes. The width shown gives the right floored percentage values.</p>
+
+<p><span id="cont-blueprint-liquid-grid-width"></span>
+<a href="#cont-blueprint-liquid-grid-width">$blueprint-liquid-grid-width</a> <code>3.167%</code></p>
+
+<p><span id="cont-blueprint-liquid-grid-margin"></span>
+<a href="#cont-blueprint-liquid-grid-margin">$blueprint-liquid-grid-margin</a> <code>1.042%</code></p>
+
+<p><span id="cont-blueprint-liquid-container-width"></span>
+<a href="#cont-blueprint-liquid-container-width">$blueprint-liquid-container-width</a> <code>80%</code></p>
+
+<p>Do not edit below this line unless you really know what you&#8217;re doing.</p>
+
+<p><span id="cont-blueprint-liquid-container-min-width"></span>
+<a href="#cont-blueprint-liquid-container-min-width">$blueprint-liquid-container-min-width</a> <code>950px</code></p>
+
+<p><span id="cont-blueprint-liquid-grid-push-pull"></span>
+<a href="#cont-blueprint-liquid-grid-push-pull">$blueprint-liquid-grid-push-pull</a> <code>-($blueprint-liquid-grid-margin + $blueprint-liquid-grid-width)</code></p>
+
+<hr />
+
+<h2>Functions</h2>
+
+<p><a href="#function-span-fluid-source" rel="view source">view source</a>
+<span id="function-span-fluid"></span></p>
+
+<h3><a href="#function-span-fluid">span-fluid</a>($n)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@function</span> <span class="nt">span-fluid</span><span class="o">(</span><span class="err">$</span><span class="nt">n</span><span class="o">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">@return</span> <span class="err">$</span><span class="nt">blueprint-liquid-grid-width</span> <span class="o">*</span> <span class="err">$</span><span class="nt">n</span> <span class="o">+</span> <span class="err">$</span><span class="nt">blueprint-liquid-grid-margin</span> <span class="o">*</span> <span class="o">(</span><span class="err">$</span><span class="nt">n</span> <span class="nt">-</span> <span class="nt">1</span><span class="o">);</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Return the width of <code>$n</code> columns in percents.</p>
+
+<hr />
+
+<h2>Mixins</h2>
+
+<p><a href="#mixin-blueprint-liquid-grid-source" rel="view source">view source</a>
+<span id="mixin-blueprint-liquid-grid"></span></p>
+
+<h3><a href="#mixin-blueprint-liquid-grid">blueprint-liquid-grid</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> blueprint-liquid-grid</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// A container should group all your columns</span>
+</span><span class='line'>  <span class="nc">.container</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> container</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="c1">// Use these classes (or mixins) to set the width of a column.</span>
+</span><span class='line'>  <span class="k">@for</span> <span class="nv">$n</span> <span class="ow">from</span> <span class="mi">1</span> <span class="ow">to</span> <span class="nv">$blueprint-liquid-grid-columns</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nc">.span-</span><span class="si">#{</span><span class="nv">$n</span><span class="si">}</span> <span class="p">{</span>
+</span><span class='line'>      <span class="na">width</span><span class="o">:</span> <span class="nf">span-fluid</span><span class="p">(</span><span class="nv">$n</span><span class="p">);</span> <span class="p">}</span>
+</span><span class='line'>    <span class="nt">div</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">&amp;</span><span class="nc">.span-</span><span class="si">#{</span><span class="nv">$n</span><span class="si">}</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">@include</span><span class="nd"> column</span><span class="p">(</span><span class="nv">$n</span><span class="o">,</span> <span class="nv">$n</span> <span class="o">==</span> <span class="nv">$blueprint-liquid-grid-columns</span><span class="p">);</span> <span class="p">}</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="c1">// The last column in a row needs this class (or mixin) or it will end up on the next row.</span>
+</span><span class='line'>  <span class="nt">div</span><span class="nc">.last</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> last</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="c1">// Add these to a column to append empty cols.</span>
+</span><span class='line'>  <span class="k">@for</span> <span class="nv">$n</span> <span class="ow">from</span> <span class="mi">1</span> <span class="ow">to</span> <span class="nv">$blueprint-liquid-grid-columns</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nc">.append-</span><span class="si">#{</span><span class="nv">$n</span><span class="si">}</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">@include</span><span class="nd"> append</span><span class="p">(</span><span class="nv">$n</span><span class="p">);</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="c1">// Add these to a column to prepend empty cols.</span>
+</span><span class='line'>  <span class="k">@for</span> <span class="nv">$n</span> <span class="ow">from</span> <span class="mi">1</span> <span class="ow">to</span> <span class="nv">$blueprint-liquid-grid-columns</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nc">.prepend-</span><span class="si">#{</span><span class="nv">$n</span><span class="si">}</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">@include</span><span class="nd"> prepend</span><span class="p">(</span><span class="nv">$n</span><span class="p">);</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="c1">// Use these classes on an element to push it into the</span>
+</span><span class='line'>  <span class="c1">// next column, or to pull it into the previous column.</span>
+</span><span class='line'>  <span class="k">@for</span> <span class="nv">$n</span> <span class="ow">from</span> <span class="mi">1</span> <span class="ow">to</span> <span class="nv">$blueprint-liquid-grid-columns</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nc">.pull-</span><span class="si">#{</span><span class="nv">$n</span><span class="si">}</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">@include</span><span class="nd"> pull</span><span class="p">(</span><span class="nv">$n</span><span class="p">);</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">@for</span> <span class="nv">$n</span> <span class="ow">from</span> <span class="mi">1</span> <span class="ow">to</span> <span class="nv">$blueprint-liquid-grid-columns</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nc">.push-</span><span class="si">#{</span><span class="nv">$n</span><span class="si">}</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">@include</span><span class="nd"> push</span><span class="p">(</span><span class="nv">$n</span><span class="p">);</span> <span class="p">}</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-container-source" rel="view source">view source</a>
+<span id="mixin-container"></span></p>
+
+<h3><a href="#mixin-container">container</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> container</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  min-width</span><span class="o">:</span> <span class="nv">$blueprint-liquid-container-min-width</span><span class="p">;</span>
+</span><span class='line'><span class="na">  width</span><span class="o">:</span> <span class="nv">$blueprint-liquid-container-width</span><span class="p">;</span>
+</span><span class='line'><span class="na">  margin</span><span class="o">:</span> <span class="mi">0</span> <span class="no">auto</span><span class="p">;</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">include</span> <span class="nt">clearfix</span><span class="o">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-span-source" rel="view source">view source</a>
+<span id="mixin-span"></span></p>
+
+<h3><a href="#mixin-span">span</a>($n, $important)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> span</span><span class="p">(</span><span class="nv">$n</span><span class="o">,</span> <span class="nv">$important</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  @warn</span><span class="err"> &quot;</span><span class="na">The</span><span class="err"> </span><span class="na">span</span><span class="err"> </span><span class="na">mixin</span><span class="err"> </span><span class="na">is</span><span class="err"> </span><span class="na">deprecated.</span><span class="err"> </span><span class="na">Please</span><span class="err"> </span><span class="na">use</span><span class="err"> </span><span class="na">the</span><span class="err"> </span><span class="na">span-fluid</span><span class="err"> </span><span class="na">function</span><span class="err"> </span><span class="na">instead.</span><span class="err"> </span><span class="na">E.g.</span><span class="err"> </span><span class="na">width</span><span class="o">:</span> <span class="nf">span-fluid</span><span class="p">(</span><span class="si">#{</span><span class="nv">$n</span><span class="si">}</span><span class="p">)</span><span class="s2">&quot;;</span>
+</span><span class='line'><span class="na">  $width</span><span class="o">:</span> <span class="nf">span-fluid</span><span class="p">(</span><span class="nv">$n</span><span class="p">);</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">if</span> <span class="err">$</span><span class="nt">important</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    width</span><span class="o">:</span> <span class="nv">$width</span> <span class="nv">!important</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">else</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    width</span><span class="o">:</span> <span class="nv">$width</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-last-source" rel="view source">view source</a>
+<span id="mixin-last"></span></p>
+
+<h3><a href="#mixin-last">last</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> last</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  margin-right</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-column-source" rel="view source">view source</a>
+<span id="mixin-column"></span></p>
+
+<h3><a href="#mixin-column">column</a>($n, $last)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> column</span><span class="p">(</span><span class="nv">$n</span><span class="o">,</span> <span class="nv">$last</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">include</span> <span class="nt">float-left</span><span class="o">;</span>
+</span><span class='line'><span class="err">  </span><span class="nt">overflow</span><span class="nd">:</span> <span class="nt">hidden</span><span class="o">;</span>
+</span><span class='line'><span class="err">  </span><span class="nt">width</span><span class="nd">:</span> <span class="nt">span-fluid</span><span class="o">(</span><span class="err">$</span><span class="nt">n</span><span class="o">);</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">if</span> <span class="err">$</span><span class="nt">last</span> <span class="p">{</span>
+</span><span class='line'><span class="err">    </span><span class="o">@</span><span class="nt">include</span> <span class="nt">last</span><span class="o">;</span> <span class="p">}</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">else</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    margin-right</span><span class="o">:</span> <span class="nv">$blueprint-liquid-grid-margin</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-append-source" rel="view source">view source</a>
+<span id="mixin-append"></span></p>
+
+<h3><a href="#mixin-append">append</a>($n)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> append</span><span class="p">(</span><span class="nv">$n</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  padding-right</span><span class="o">:</span> <span class="p">(</span><span class="nv">$blueprint-liquid-grid-width</span> <span class="o">+</span> <span class="nv">$blueprint-liquid-grid-margin</span><span class="p">)</span> <span class="o">*</span> <span class="nv">$n</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-prepend-source" rel="view source">view source</a>
+<span id="mixin-prepend"></span></p>
+
+<h3><a href="#mixin-prepend">prepend</a>($n)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> prepend</span><span class="p">(</span><span class="nv">$n</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  padding-left</span><span class="o">:</span> <span class="p">(</span><span class="nv">$blueprint-liquid-grid-width</span> <span class="o">+</span> <span class="nv">$blueprint-liquid-grid-margin</span><span class="p">)</span> <span class="o">*</span> <span class="nv">$n</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-pull-source" rel="view source">view source</a>
+<span id="mixin-pull"></span></p>
+
+<h3><a href="#mixin-pull">pull</a>($n, $last)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> pull</span><span class="p">(</span><span class="nv">$n</span><span class="o">,</span> <span class="nv">$last</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  margin-left</span><span class="o">:</span> <span class="nv">$blueprint-liquid-grid-push-pull</span> <span class="o">*</span> <span class="nv">$n</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-push-source" rel="view source">view source</a>
+<span id="mixin-push"></span></p>
+
+<h3><a href="#mixin-push">push</a>($n)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> push</span><span class="p">(</span><span class="nv">$n</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">include</span> <span class="nt">float-right</span><span class="o">;</span>
+</span><span class='line'><span class="err">  </span><span class="nt">margin</span><span class="nd">:</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    top</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="na">    left</span><span class="o">:</span> <span class="nv">$blueprint-liquid-grid-margin</span><span class="p">;</span>
+</span><span class='line'><span class="na">    right</span><span class="o">:</span> <span class="nv">$blueprint-liquid-grid-push-pull</span> <span class="o">*</span> <span class="nv">$n</span><span class="p">;</span>
+</span><span class='line'><span class="na">    bottom</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span><span class="o">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-border-source" rel="view source">view source</a>
+<span id="mixin-border"></span></p>
+
+<h3><a href="#mixin-border">border</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> border</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  border-right</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="no">solid</span> <span class="mh">#eeeeee</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-colborder-source" rel="view source">view source</a>
+<span id="mixin-colborder"></span></p>
+
+<h3><a href="#mixin-colborder">colborder</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> colborder</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  padding-right</span><span class="o">:</span> <span class="nv">$blueprint-liquid-grid-margin</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+</span><span class='line'><span class="na">  margin-right</span><span class="o">:</span> <span class="nv">$blueprint-liquid-grid-margin</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">include</span> <span class="nt">border</span><span class="o">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-colruler-source" rel="view source">view source</a>
+<span id="mixin-colruler"></span></p>
+
+<h3><a href="#mixin-colruler">colruler</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> colruler</span> <span class="p">{</span>
+</span><span class='line'><span class="na">  background</span><span class="o">:</span> <span class="mh">#dddddd</span><span class="p">;</span>
+</span><span class='line'><span class="na">  color</span><span class="o">:</span> <span class="mh">#dddddd</span><span class="p">;</span>
+</span><span class='line'><span class="na">  clear</span><span class="o">:</span> <span class="no">both</span><span class="p">;</span>
+</span><span class='line'><span class="na">  width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span><span class='line'><span class="na">  height</span><span class="o">:</span> <span class="mi">0</span><span class="mf">.083</span><span class="kt">em</span><span class="p">;</span>
+</span><span class='line'><span class="na">  margin</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="na">  margin-left</span><span class="o">:</span> <span class="nv">$blueprint-liquid-grid-margin</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+</span><span class='line'><span class="na">  margin-right</span><span class="o">:</span> <span class="nv">$blueprint-liquid-grid-margin</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+</span><span class='line'><span class="na">  border</span><span class="o">:</span> <span class="no">none</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-colspacer-source" rel="view source">view source</a>
+<span id="mixin-colspacer"></span></p>
+
+<h3><a href="#mixin-colspacer">colspacer</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> colspacer</span> <span class="p">{</span>
+</span><span class='line'><span class="err">  </span><span class="o">@</span><span class="nt">include</span> <span class="nt">colruler</span><span class="o">;</span>
+</span><span class='line'><span class="err">  </span><span class="nt">background</span><span class="nd">:</span> <span class="nt">white</span><span class="o">;</span>
+</span><span class='line'><span class="err">  </span><span class="nt">color</span><span class="nd">:</span> <span class="nt">white</span><span class="o">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+  
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<ul>
+	<li><a href="/reference/buttons/">Buttons</a></li>
+	<li><a href="/reference/colors/">Colors</a></li>
+	<li><a href="/reference/debug/">Debug</a></li>
+	<li><a href="/reference/fancy-type/">Fancy Type</a></li>
+	<li><a href="/reference/form/">Form</a></li>
+	<li><a href="/reference/grid/">Grid</a></li>
+	<li><a href="/reference/interaction/">Interaction</a></li>
+	<li><a href="/reference/internet-explorer/">Internet Explorer</a></li>
+	<li><a href="/reference/link-icons/">Link Icons</a></li>
+	<li><a href="/reference/liquid/">Liquid</a></li>
+	<li><a href="/reference/print/">Print</a></li>
+	<li><a href="/reference/reset/">Reset</a></li>
+	<li><a href="/reference/rtl/">RTL</a></li>
+	<li><a href="/reference/scaffolding/">Scaffolding</a></li>
+	<li><a href="/reference/typography/">Typography</a></li>
+	<li><a href="/reference/utilities/">Utilities</a></li>
+</ul>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Christopher M. Eppstein. -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

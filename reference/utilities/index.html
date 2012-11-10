@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Utilities - Compass-Blueprint</title>
+  <meta name="author" content="Christopher M. Eppstein.">
+
+  
+  <meta name="description" content="Utilities View Source Some utility classes. This file can be imported using: @import "blueprint/utilities" Compass Imports No Wrap – Remembering &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://Compass.github.com/reference/utilities/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Compass-Blueprint" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <nav role="navigation"><form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:Compass.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search the docs"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/" rel="home">Compass-blueprint</a></li>
+  <li><a href="/reference" rel="reference">Reference</a></li>
+  <li><a href="/help" rel="help">Help</a></li>
+<!--   <li><a href="/blog" rel="blog">Blog</a></li>
+   -->  <li><a href="/install" rel="install">Install</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Utilities</h1>
+  </header>
+  
+  <p><a class="lsf-icon" title="github" href="https://github.com/Compass/compass-blueprint/blob/master/framework/blueprint/stylesheets/blueprint/_utilities.scss">View Source</a></p>
+
+<p>Some utility classes.</p>
+
+<p>This file can be imported using: <code>@import "blueprint/utilities"</code></p>
+
+<hr />
+
+<h2>Compass Imports</h2>
+
+<ol>
+<li><a href="http://compass-style.org/reference/compass/typography/text/nowrap/">No Wrap</a> – Remembering whether or not there&#8217;s a hyphen in white-space is too hard.</li>
+<li><a href="http://compass-style.org/reference/compass/utilities/general/clearfix/">Clearfix</a> – Mixins for clearfixing.</li>
+</ol>
+
+
+<hr />
+
+<h2>Mixins</h2>
+
+<p><a href="#mixin-blueprint-utilities-source" rel="view source">view source</a>
+<span id="mixin-blueprint-utilities"></span></p>
+
+<h3><a href="#mixin-blueprint-utilities">blueprint-utilities</a></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> blueprint-utilities</span> <span class="p">{</span>
+</span><span class='line'><span class="err">  </span><span class="o">//</span> <span class="nt">Regular</span> <span class="nt">clearing</span> <span class="nt">apply</span> <span class="nt">to</span> <span class="nt">column</span> <span class="nt">that</span> <span class="nt">should</span> <span class="nt">drop</span> <span class="nt">below</span> <span class="nt">previous</span> <span class="nt">ones</span><span class="nc">.</span>
+</span><span class='line'><span class="err">  </span><span class="nc">.clear</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    clear</span><span class="o">:</span> <span class="no">both</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="err">  </span><span class="o">//</span> <span class="nt">turn</span> <span class="nt">off</span> <span class="nt">text</span> <span class="nt">wrapping</span> <span class="nt">for</span> <span class="nt">the</span> <span class="nt">element</span><span class="nc">.</span>
+</span><span class='line'><span class="err">  </span><span class="nc">.nowrap</span> <span class="p">{</span>
+</span><span class='line'><span class="err">    </span><span class="o">@</span><span class="nt">include</span> <span class="nt">nowrap</span><span class="o">;</span> <span class="p">}</span>
+</span><span class='line'><span class="err">  </span><span class="o">//</span> <span class="nt">Apply</span> <span class="nt">to</span> <span class="nt">an</span> <span class="nt">element</span> <span class="nt">that</span> <span class="nt">has</span> <span class="nt">floated</span> <span class="nt">children</span> <span class="nt">to</span> <span class="nt">make</span> <span class="nt">the</span> <span class="nt">bottom</span>
+</span><span class='line'><span class="err">  </span><span class="o">//</span> <span class="nt">of</span> <span class="nt">the</span> <span class="nt">element</span> <span class="nt">fall</span> <span class="nt">_below_</span> <span class="nt">the</span> <span class="nt">floated</span> <span class="nt">children</span><span class="nc">.</span>
+</span><span class='line'><span class="err">  </span><span class="nc">.clearfix</span> <span class="p">{</span>
+</span><span class='line'><span class="err">    </span><span class="o">@</span><span class="nt">include</span> <span class="nt">clearfix</span><span class="o">;</span> <span class="p">}</span>
+</span><span class='line'><span class="err">  </span><span class="nc">.small</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    font-size</span><span class="o">:</span> <span class="mi">0</span><span class="mf">.8</span><span class="kt">em</span><span class="p">;</span>
+</span><span class='line'><span class="na">    margin-bottom</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.875</span><span class="kt">em</span><span class="p">;</span>
+</span><span class='line'><span class="na">    line-height</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.875</span><span class="kt">em</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="err">  </span><span class="nc">.large</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    font-size</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.2</span><span class="kt">em</span><span class="p">;</span>
+</span><span class='line'><span class="na">    line-height</span><span class="o">:</span> <span class="mi">2</span><span class="mf">.5</span><span class="kt">em</span><span class="p">;</span>
+</span><span class='line'><span class="na">    margin-bottom</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.25</span><span class="kt">em</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="err">  </span><span class="nc">.first</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    margin-left</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="na">    padding-left</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="err">  </span><span class="nc">.last</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    margin-right</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="na">    padding-right</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="err">  </span><span class="nc">.top</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    margin-top</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="na">    padding-top</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="err">  </span><span class="nc">.bottom</span> <span class="p">{</span>
+</span><span class='line'><span class="na">    margin-bottom</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="na">    padding-bottom</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Most of these utility classes are not &#8220;semantic&#8221;. If you use them, you are mixing your content and presentation. For shame!</p>
+
+  
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<ul>
+	<li><a href="/reference/buttons/">Buttons</a></li>
+	<li><a href="/reference/colors/">Colors</a></li>
+	<li><a href="/reference/debug/">Debug</a></li>
+	<li><a href="/reference/fancy-type/">Fancy Type</a></li>
+	<li><a href="/reference/form/">Form</a></li>
+	<li><a href="/reference/grid/">Grid</a></li>
+	<li><a href="/reference/interaction/">Interaction</a></li>
+	<li><a href="/reference/internet-explorer/">Internet Explorer</a></li>
+	<li><a href="/reference/link-icons/">Link Icons</a></li>
+	<li><a href="/reference/liquid/">Liquid</a></li>
+	<li><a href="/reference/print/">Print</a></li>
+	<li><a href="/reference/reset/">Reset</a></li>
+	<li><a href="/reference/rtl/">RTL</a></li>
+	<li><a href="/reference/scaffolding/">Scaffolding</a></li>
+	<li><a href="/reference/typography/">Typography</a></li>
+	<li><a href="/reference/utilities/">Utilities</a></li>
+</ul>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Christopher M. Eppstein. -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

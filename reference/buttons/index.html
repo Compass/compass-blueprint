@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Buttons - Compass-Blueprint</title>
+  <meta name="author" content="Christopher M. Eppstein.">
+
+  
+  <meta name="description" content="Buttons View Source Install the buttons module with: compass install blueprint/buttons This file can be imported using: @import "blueprint/buttons" &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://Compass.github.com/reference/buttons/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Compass-Blueprint" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <nav role="navigation"><form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:Compass.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search the docs"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/" rel="home">Compass-blueprint</a></li>
+  <li><a href="/reference" rel="reference">Reference</a></li>
+  <li><a href="/help" rel="help">Help</a></li>
+<!--   <li><a href="/blog" rel="blog">Blog</a></li>
+   -->  <li><a href="/install" rel="install">Install</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Buttons</h1>
+  </header>
+  
+  <p><a class="lsf-icon" title="github" href="https://github.com/Compass/compass-blueprint/blob/master/framework/blueprint/stylesheets/blueprint/_buttons.scss">View Source</a></p>
+
+<p>Install the buttons module with:</p>
+
+<p><code>compass install blueprint/buttons</code></p>
+
+<p>This file can be imported using: <code>@import "blueprint/buttons"</code></p>
+
+<h2>Compass Imports</h2>
+
+<ol>
+<li><a href="http://compass-style.org/reference/compass/css3/inline_block/">Inline Block</a> – Declare an element inline block for all browsers.</li>
+<li><a href="http://compass-style.org/reference/compass/utilities/general/float/">Float</a> – Mixins for cross-browser floats.</li>
+</ol>
+
+
+<h2>Configurable Variables <a class="lsf-icon" title="help" href="/help/tutorials/configurable-variables/"></a></h2>
+
+<h3>Default Button Font</h3>
+
+<p><span id="const-blueprint-button-font-family"></span>
+<a href="#const-blueprint-button-font-family">$blueprint-button-font-family</a> <code>"Lucida Grande", Tahoma, Arial, Verdana, sans-serif</code></p>
+
+<h3>Default Button Colors</h3>
+
+<p><span id="const-blueprint-button-border-color"></span>
+<a href="#const-blueprint-button-border-color">$blueprint-button-border-color</a> <code>#dedede</code></p>
+
+<p><span id="const-blueprint-button-background-color"></span>
+<a href="#const-blueprint-button-background-color">$blueprint-button-background-color</a> <code>#f5f5f5</code></p>
+
+<p><span id="const-blueprint-button-font-color"></span>
+<a href="#const-blueprint-button-font-color">$blueprint-button-font-color</a> <code>#565656</code></p>
+
+<p><span id="const-blueprint-button-hover-border-color"></span>
+<a href="#const-const-blueprint-button-hover-border-color">$blueprint-button-hover-border-color</a> <code>#c2e1ef</code></p>
+
+<h3>Default Button Hover Colors</h3>
+
+<p><span id="const-blueprint-button-hover-background-color"></span>
+<a href="#const-blueprint-button-hover-background-color">$blueprint-button-hover-background-color</a> <code>#dff4ff</code></p>
+
+<p><span id="const-blueprint-button-hover-font-color"></span>
+<a href="#const-blueprint-button-hover-font-color">$blueprint-button-hover-font-color</a> <code>#336699</code></p>
+
+<p><span id="const-blueprint-button-active-border-color"></span>
+<a href="#const-blueprint-button-active-border-color">$blueprint-button-active-border-color</a> <code>#6299c5</code></p>
+
+<h3>Default Button Active Colors</h3>
+
+<p><span id="const-blueprint-button-active-background-color"></span>
+<a href="#const-blueprint-button-active-background-color">$blueprint-button-active-background-color</a> <code>#6299c5</code></p>
+
+<p><span id="const-blueprint-button-active-font-color"></span>
+<a href="#const-blueprint-button-active-font-color">$blueprint-button-active-font-color</a> <code>white</code></p>
+
+<h2>Mixins</h2>
+
+<p><a href="#mixin-button-colors-source" rel="view source">view source</a>
+<span id="mixin-button-colors"></span></p>
+
+<h3><a href="#mixin-button-colors">button-colors</a>($font-color, $bg-color, $border-color, $border-highlight-color)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> button-colors</span><span class="p">(</span><span class="nv">$font-color</span><span class="o">:</span> <span class="nv">$blueprint-button-font-color</span><span class="o">,</span> <span class="nv">$bg-color</span><span class="o">:</span> <span class="nv">$blueprint-button-background-color</span><span class="o">,</span> <span class="nv">$border-color</span><span class="o">:</span> <span class="nv">$blueprint-button-border-color</span><span class="o">,</span> <span class="nv">$border-highlight-color</span><span class="o">:</span> <span class="nv">$border-color</span> <span class="o">+</span> <span class="mh">#101010</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="na">background-color</span><span class="o">:</span> <span class="nv">$bg-color</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">border-color</span><span class="o">:</span> <span class="nv">$border-highlight-color</span> <span class="nv">$border-color</span> <span class="nv">$border-color</span> <span class="nv">$border-highlight-color</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">color</span><span class="o">:</span> <span class="nv">$font-color</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sets the colors for a button <strong>@param border-highlight-color</strong> The highlight color defaults to whatever is the value of the <strong>border-color</strong> but it&#8217;s one shade lighter.</p>
+
+<hr />
+
+<p><a href="#mixin-button-active-colors-source" rel="view source">view source</a>
+<span id="mixin-button-active-colors"></span></p>
+
+<h3><a href="#mixin-button-active-colors">button-active-colors</a>($font-color, $bg-color, $border-color, $border-highlight-color)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> button-active-colors</span><span class="p">(</span><span class="nv">$font-color</span><span class="o">:</span> <span class="nv">$blueprint-button-active-font-color</span><span class="o">,</span> <span class="nv">$bg-color</span><span class="o">:</span> <span class="nv">$blueprint-button-active-background-color</span><span class="o">,</span> <span class="nv">$border-color</span><span class="o">:</span> <span class="nv">$blueprint-button-active-border-color</span><span class="o">,</span> <span class="nv">$border-highlight-color</span><span class="o">:</span> <span class="nv">$border-color</span> <span class="o">+</span> <span class="mh">#101010</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> button-colors</span><span class="p">(</span><span class="nv">$font-color</span><span class="o">,</span> <span class="nv">$bg-color</span><span class="o">,</span> <span class="nv">$border-color</span><span class="o">,</span> <span class="nv">$border-highlight-color</span><span class="p">);</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sets the colors for a button in the active state <strong>@param border-highlight-color</strong> The highlight color defaults to whatever is the value of the <strong>border-color</strong> but it&#8217;s one shade lighter.</p>
+
+<hr />
+
+<p><a href="#mixin-button-hover-colors-source" rel="view source">view source</a>
+<span id="mixin-button-hover-colors"></span></p>
+
+<h3><a href="#mixin-button-hover-colors">button-hover-colors</a>($font-color, $bg-color, $border-color, $border-highlight-color)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> button-hover-colors</span><span class="p">(</span><span class="nv">$font-color</span><span class="o">:</span> <span class="nv">$blueprint-button-hover-font-color</span><span class="o">,</span> <span class="nv">$bg-color</span><span class="o">:</span> <span class="nv">$blueprint-button-hover-background-color</span><span class="o">,</span> <span class="nv">$border-color</span><span class="o">:</span> <span class="nv">$blueprint-button-hover-border-color</span><span class="o">,</span> <span class="nv">$border-highlight-color</span><span class="o">:</span> <span class="nv">$border-color</span> <span class="o">+</span> <span class="mh">#101010</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> button-colors</span><span class="p">(</span><span class="nv">$font-color</span><span class="o">,</span> <span class="nv">$bg-color</span><span class="o">,</span> <span class="nv">$border-color</span><span class="o">,</span> <span class="nv">$border-highlight-color</span><span class="p">);</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sets the colors for a button in the hover state. <strong>@param border-highlight-color</strong> The highlight color defaults to whatever is the value of the <strong>border-color</strong> but it&#8217;s one shade lighter.</p>
+
+<hr />
+
+<p><a href="#mixin-button-base-source" rel="view source">view source</a>
+<span id="mixin-button-base"></span></p>
+
+<h3><a href="#mixin-button-base">button-base</a>($float)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> button-base</span><span class="p">(</span><span class="nv">$float</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">@if</span> <span class="nv">$float</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> float</span><span class="p">(</span><span class="nv">$float</span><span class="p">);</span>
+</span><span class='line'>    <span class="na">display</span><span class="o">:</span> <span class="no">block</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">@else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">@include</span><span class="nd"> inline-block</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span><span class="mf">.7</span><span class="kt">em</span> <span class="mi">0</span><span class="mf">.5</span><span class="kt">em</span> <span class="mi">0</span><span class="mf">.7</span><span class="kt">em</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">border-width</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">border-style</span><span class="o">:</span> <span class="no">solid</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">font-family</span><span class="o">:</span> <span class="nv">$blueprint-button-font-family</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">font-size</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">line-height</span><span class="o">:</span> <span class="mi">130</span><span class="kt">%</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">font-weight</span><span class="o">:</span> <span class="no">bold</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">text-decoration</span><span class="o">:</span> <span class="no">none</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">cursor</span><span class="o">:</span> <span class="no">pointer</span><span class="p">;</span>
+</span><span class='line'>  <span class="nt">img</span> <span class="p">{</span>
+</span><span class='line'>    <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">3</span><span class="kt">px</span> <span class="mi">-3</span><span class="kt">px</span> <span class="mi">0</span> <span class="nv">!important</span><span class="p">;</span>
+</span><span class='line'>    <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="na">border</span><span class="o">:</span> <span class="no">none</span><span class="p">;</span>
+</span><span class='line'>    <span class="na">width</span><span class="o">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+</span><span class='line'>    <span class="na">height</span><span class="o">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+</span><span class='line'>    <span class="na">float</span><span class="o">:</span> <span class="no">none</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-anchor-button-source" rel="view source">view source</a>
+<span id="mixin-anchor-button"></span></p>
+
+<h3><a href="#mixin-anchor-button">anchor-button</a>($float)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> anchor-button</span><span class="p">(</span><span class="nv">$float</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">@include</span><span class="nd"> button-base</span><span class="p">(</span><span class="nv">$float</span><span class="p">);</span>
+</span><span class='line'>  <span class="na">padding</span><span class="o">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">7</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p><a href="#mixin-button-button-source" rel="view source">view source</a>
+<span id="mixin-button-button"></span></p>
+
+<h3><a href="#mixin-button-button">button-button</a>($float)</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="k">@mixin</span><span class="nf"> button-button</span><span class="p">(</span><span class="nv">$float</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">@include</span><span class="nd"> button-base</span><span class="p">(</span><span class="nv">$float</span><span class="p">);</span>
+</span><span class='line'>  <span class="na">width</span><span class="o">:</span> <span class="no">auto</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">overflow</span><span class="o">:</span> <span class="no">visible</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">padding</span><span class="o">:</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">3</span><span class="kt">px</span> <span class="mi">7</span><span class="kt">px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">&amp;</span><span class="o">[</span><span class="nt">type</span><span class="o">]</span> <span class="p">{</span>
+</span><span class='line'>    <span class="na">padding</span><span class="o">:</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">7</span><span class="kt">px</span><span class="p">;</span>
+</span><span class='line'>    <span class="na">line-height</span><span class="o">:</span> <span class="mi">17</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="o">*</span><span class="nd">:first-child</span> <span class="o">+</span> <span class="nt">html</span> <span class="k">&amp;</span><span class="o">[</span><span class="nt">type</span><span class="o">]</span> <span class="p">{</span>
+</span><span class='line'>    <span class="na">padding</span><span class="o">:</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">3</span><span class="kt">px</span> <span class="mi">7</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+  
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<ul>
+	<li><a href="/reference/buttons/">Buttons</a></li>
+	<li><a href="/reference/colors/">Colors</a></li>
+	<li><a href="/reference/debug/">Debug</a></li>
+	<li><a href="/reference/fancy-type/">Fancy Type</a></li>
+	<li><a href="/reference/form/">Form</a></li>
+	<li><a href="/reference/grid/">Grid</a></li>
+	<li><a href="/reference/interaction/">Interaction</a></li>
+	<li><a href="/reference/internet-explorer/">Internet Explorer</a></li>
+	<li><a href="/reference/link-icons/">Link Icons</a></li>
+	<li><a href="/reference/liquid/">Liquid</a></li>
+	<li><a href="/reference/print/">Print</a></li>
+	<li><a href="/reference/reset/">Reset</a></li>
+	<li><a href="/reference/rtl/">RTL</a></li>
+	<li><a href="/reference/scaffolding/">Scaffolding</a></li>
+	<li><a href="/reference/typography/">Typography</a></li>
+	<li><a href="/reference/utilities/">Utilities</a></li>
+</ul>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Christopher M. Eppstein. -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
