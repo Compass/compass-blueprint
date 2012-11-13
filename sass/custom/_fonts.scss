@@ -1,0 +1,65 @@
+// Here you can easily change font faces which are used in your site.
+// To give it a try, uncomment some of the lines below rebuild your blog, and see how it works. your sites's.
+// If you love to use Web Fonts, you also need to add some lines to source/_includes/custom/head.html
+
+@include font-face (
+  'MuseoSans',
+  font-files(
+    'museosans-web-webfont.woff', 'woff',
+    'museosans-web-webfont.ttf', 'truetype',
+    'museosans-web-webfont.svg#webfont', 'svg'
+  ),
+  'museosans-web-webfont.eot',
+  normal,
+  normal
+);
+
+$sans: "MuseoSans", sans-serif;
+//$serif: "Baskerville", serif;
+//$mono: "Courier", monospace;
+$heading-font-family: 'Museo Sans', "museosans-web", serif;
+// $header-title-font-family: "Futura", sans-serif;
+//$header-subtitle-font-family: "Futura", sans-serif;
+
+@include font-face (
+  'LigatureSymbols',
+  font-files(
+    'LigatureSymbols-2.09.woff', 'woff',
+    'LigatureSymbols-2.09.ttf', 'truetype',
+    'LigatureSymbols-2.09.svg#webfont', 'svg'
+  ),
+  'LigatureSymbols-2.09.eot',
+  normal,
+  normal
+);
+
+.lsf {
+  font-family: 'LigatureSymbols';
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.lsf-icon:before {
+  content:attr(title);
+  margin-right:0.3em;
+  font-size:130%;
+  font-family: 'LigatureSymbols';
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}

@@ -1,0 +1,118 @@
+---
+layout: page
+title: "Reference"
+date: 2011-08-02 11:48
+comments: false
+sharing: false
+footer: false
+---
+%p
+	The blueprint module is a simple way of importing all of the most commonly used blueprint modules. In addition, it provides a single mixin,
+	%code +blueprint
+	, that can be used to generate the blueprint css styles.
+
+%h3 Installing
+%p
+	To create a project using blueprint:
+%pre
+	%code compass create my_project --using blueprint
+%p
+	To add blueprint to an existing compass project:
+%pre
+	%code compass install blueprint
+%p
+	To add blueprint and compass to a Rails project:
+%pre
+	%code compass init rails --using blueprint
+
+%h3 Alternate Project Layouts
+%p
+	For any of the above commands you could have also selected the 
+	%code blueprint/basic 
+	or 
+	%code blueprint/semantic 
+	patterns. The basic pattern assumes that you'll start out using conventional class-based blueprint styling techniques, while the semantic template assumes that you'll be using mixins and 
+	%code @extend 
+	to style your site. 
+%p
+	Example:
+%pre 
+	%code compass create my_project --using blueprint/semantic
+
+%p 
+	This file can be imported using: 
+	%code @import "blueprint"
+
+%h2 Imports
+%ol
+	%li.colors 
+		%a(href="/reference/colors/")Colors
+	%li.debug
+		%a(href="/reference/debug/")Debug
+	%li.form
+		%a(href="/reference/form/")Form
+	%li.grid
+		%a(href="/reference/grid/")Grid
+	%li.internet-exporer
+		%a(href="/reference/internet-explorer/")Internet Explorer
+	%li.interaction
+		%a(href="/reference/interaction/")Interaction
+	%li.print
+		%a(href="/reference/print/")Print
+	%li.typography
+		%a(href="/reference/typography/")Typography
+	%li.utilities
+		%a(href="/reference/utilities/")Utilities
+
+%h2 Non-Imported Modules
+%ol
+	%li.buttons
+		%a(href="/reference/buttons/")Buttons
+	%li.fancy-type
+		%a(href="/reference/fancy-type/")Fancy Type
+	%li.link-icons
+		%a(href="/reference/link-icons/")Link Icons
+	%li.liquid
+		%a(href="/reference/liquid/")Liquid
+	%li.reset
+		%a(href="/reference/reset/")Reset
+	%li.rtl
+		%a(href="/reference/rtl/")RTL
+	%li.scaffolding
+		%a(href="/reference/scaffolding/")Scaffolding
+
+%h2 Mixins
+%a{:href => "#mixin-blueprint-source", :rel => "view source"} view source
+%h3.mixin{:id => "mixin-blueprint"}
+	%a.permalink(href="#mixin-blueprint")blueprint(<span class="arg" title="Defaults to: false">$nested</span>)
+.mixin-source{:id => "mixin-blueprint-source"}
+	%pre
+		%code.scss
+			@mixin blueprint($nested: false) {
+			@include blueprint-typography($nested);
+			@include blueprint-utilities;
+			@include blueprint-grid;
+			@include blueprint-debug;
+			@include blueprint-interaction;
+			@include blueprint-form; }
+
+.source-documentation
+	%h3 Usage Examples:
+	%p As a top-level mixin, apply to any page that includes the stylesheet:
+
+	%pre
+		%code.sass +blueprint
+
+	%p Scoped by a presentational class:
+	
+	%pre
+		%code.sass
+			body.blueprint
+			+blueprint(true)
+
+	%p Scoped by semantic selectors:
+
+	%pre
+		%code.sass
+			body#page-1, body#page-2, body.a-special-page-type
+			+blueprint(true)

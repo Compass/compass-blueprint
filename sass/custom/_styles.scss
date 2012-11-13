@@ -1,0 +1,83 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+html {
+	-webkit-font-smoothing: antialiased;
+	background: #395a99 image-url('grid.png');
+}
+
+body {
+	@include box-shadow(#395a99, 0, 0, 15);
+	margin-top: 3em;
+	max-width: 1100px;
+	> header {
+		background: transparent;
+	}
+	> nav {
+		border-bottom-width: 0;
+		li + li {
+			border-left: none;
+		}
+		a {
+			font-size: 1.5em;
+		}
+		form {
+			margin-top: 2px;
+			.search {
+				font-size: 1.2em;
+			}
+		}
+	}
+	> div > div {
+		background-color: #FFFFFF;
+		background-image: none !important;
+	}
+	> div {
+		border-bottom-width: 0 !important;
+	}
+	> footer {
+		@include border-bottom-radius(0);
+	}
+}
+
+#content > div, #content > article {
+	padding-top: 0 !important;
+}
+
+article > h2 {
+	background: none;
+}
+
+#{headings()} {
+	strong {
+		color: #1c73e9;
+	}
+}
+
+h1.logo {
+	@include hide-text;
+	background: image-url('logo.png') no-repeat 0% 0%;
+	height: 135px;
+	width: 423px;
+	margin: 0 auto 18px;
+}
+
+[title*="github"] {
+	@include float(right);
+	position: relative;
+	top: -80px;
+}
+
+[rel="view source"] {
+	display: none;
+}
+
+.lsf-icon {
+	padding: 1px;
+	text-decoration: none;
+	font-weight: normal !important;
+}
+
+.toggle-sidebar {
+	display: none;
+}
