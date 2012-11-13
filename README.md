@@ -1,6 +1,6 @@
 # Compass::Blueprint
 
-TODO: Write a gem description
+[Compass-blueprint](http://compass-blueprint.org) is a *CSS Framework* extension for [Compass](https://github.com/chriseppstein/compass).
 
 ## Installation
 
@@ -18,7 +18,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Create a new project
+
+    $ compass create /path/to/project --using blueprint
 
 ## Contributing
 
@@ -27,3 +29,12 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Author
+
+Compass-blueprint was written by [Chris Eppstein](http://github.com/chriseppstein).
+Chris is the Software Architect of [Caring.com](http://caring.com) and a member of the [Sass](http://sass-lang.com) core team.
+
+## Maintained by
+
+[Stephen Way](http://github.com/stephenway)
