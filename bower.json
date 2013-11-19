@@ -1,0 +1,5 @@
+{
+  "name": "compass-blueprint",
+  "version": "0.0.1",
+  "main": "framework/blueprint/stylesheets/_blueprint.scss"
+}
